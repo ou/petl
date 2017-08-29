@@ -126,9 +126,6 @@ def _get_stdout_binary():
     return sys.stdout
 
 
-stdout_binary = _get_stdout_binary()
-
-
 def _get_stdin_binary():
     try:
         return sys.stdin.buffer
@@ -150,9 +147,6 @@ def _get_stdin_binary():
         pass
     # fallback
     return sys.stdin
-
-
-stdin_binary = _get_stdin_binary()
 
 
 class StdoutSource(object):
